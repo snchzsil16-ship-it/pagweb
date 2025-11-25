@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenBite | Tienda de Alimentos Saludables</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">🍏 GreenBite</div>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <button id="carrito-btn" class="btn-carrito">🛒 <span id="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <h1>Come Bien, Vive Mejor</h1>
+    <p>GreenBite te ofrece productos naturales, frescos y llenos de energía.</p>
+    <a href="#productos" class="btn">Ver productos</a>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid" id="product-list">
+      <!-- Productos  -->
+    </div>
+  </section>
+  <!-- ENVÍO A DOMICILIO -->
+<section id="envio" class="envio">
+  <h2>🚚 Envío a Domicilio</h2>
+  <p>Recibe tus productos saludables directamente en la puerta de tu casa. Ofrecemos envíos a todo México.</p>
+  <form id="envio-form">
+    <input type="text" placeholder="Tu nombre completo" required />
+    <input type="text" placeholder="Dirección completa" required />
+    <input type="text" placeholder="Ciudad" required />
+    <input type="text" placeholder="Código postal" required />
+    <button type="submit" class="btn">Guardar dirección</button>
+  </form>
+  <p id="envio-confirmacion" hidden>✅ Dirección guardada. Se añadirá costo de envío al carrito.</p>
+</section>
+
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En <strong>GreenBite</strong> creemos que comer saludable no tiene que ser aburrido.
+      Nuestros productos están elaborados con ingredientes 100% naturales, sin conservadores
+      ni azúcares añadidos. ¡Siente la diferencia en cada bocado!
+    </p>
+    <img src="https://images.unsplash.com/photo-1572448862528-4a8b1a6c5d3c" alt="Equipo GreenBite" />
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea placeholder="Tu mensaje..." required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <p class="thanks" hidden>💚 ¡Gracias por escribirnos! Te responderemos pronto .</p>
+  </section>
+
+  <!-- CARRITO MODAL -->
+  <div id="carrito-modal" class="modal hidden">
+    <div class="envio-check">
+  <input type="checkbox" id="agregar-envio"> Agregar envío a domicilio (+$50 MXN)
+</div>
+
+    <div class="modal-content">
+      <span id="cerrar-carrito" class="close">&times;</span>
+      <h2>Tu carrito 🛒</h2>
+      <div id="carrito-items"></div>
+      <h3>Total: $<span id="total">0</span> MXN</h3>
+      <button id="comprar-btn" class="btn">Finalizar compra</button>
+       <div class="pago">
+        <h4>Selecciona tu método de pago:</h4>
+        <select id="metodo-pago">
+          <option value="tarjeta">💳 Tarjeta</option>
+          <option value="efectivo">💵 Efectivo</option>
+        </select>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 GreenBite | Alimentos saludables para una vida mejor 🌱</p>
+  </footer>
+  <!-- CHAT INTELIGENTE -->
+<div id="chat-bubble">💬</div>
+
+<div id="chat-box" class="hidden">
+  <div id="chat-header">
+  Asistente GreenBite 🤖
+  <span id="chat-close">❌</span>
+</div>
+
+  <div id="chat-messages"></div>
+  <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." />
+  <button id="chat-send">Enviar</button>
+</div>
+<div id="chat-messages"></div>
+<div id="chat-quick-buttons">
+  <button class="quick-btn">Ver productos</button>
+  <button class="quick-btn">Costo de envío</button>
+  <button class="quick-btn">Métodos de pago</button>
+  <button class="quick-btn">Contacto</button>
+</div>
+
+</body>
+</html>
